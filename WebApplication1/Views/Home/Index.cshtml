@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width" />
+<title>Покупка</title>
+
+<div class="main_css">
+    <h3>Графік руху автобусів</h3>
+    <div class="info">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Марка авто</th>
+                    <th scope="col">Номер машини</th>
+                    <th scope="col">Колір</th>
+                    <th scope="col"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in ViewBag.Bus)
+                {
+                    <tr>
+                        <th scope="row">@b.Id</th>
+                        <th>@b.Number</th>
+                        <th>@b.Brand</th>
+                        <th>@b.Color</th>
+                        <th><a href="/Home/Buy/@b.Id">Купити квиток</a></th>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
