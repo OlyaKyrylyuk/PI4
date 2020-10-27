@@ -11,7 +11,32 @@
 <div class="main_css">
     <h3>Замовлення квитків</h3>
     <div class="info">
-       <h4>Квиток успішно замовлено</h4>
+        <form method="post" action="/Home/BuyPost">
+            <input type="hidden" value="@ViewBag.Id" name="Bus_Id" />
+            <table>
+                <tr>
+                    <td><p>Введіть прізвище</p></td>
+                    <td><input type="text" name="Surname" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть ім'я</p></td>
+                    <td><input type="text" name="Name" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть номер картки</p></td>
+                    <td><input type="number" name="N_card" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть  адресу</p></td>
+                    <td><input type="text" name="Address" /> </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><input type="submit"  class="button" value="Додати" /> </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
 
 
     </div>

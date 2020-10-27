@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width" />
+<title>Додати автобус</title>
+
+<div class="main_css">
+    <h3>Замовлення квитків</h3>
+    <div class="info">
+        <form method="post" action="/Home/AddPost">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <table>
+                <tr>
+                    <td><p>Введіть номер машини</p></td>
+                    <td><input type="text" name="Number" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть марку машини</p></td>
+                    <td><input type="text" name="Brand" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть колір машини</p></td>
+                    <td><input type="text" name="Color" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть  дату та час відправленя</p></td>
+                    <td><input type="date" name="Data" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть  пункт відправленн(місто)</p></td>
+                    <td><input type="text" name="Start" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть  пункт прибуття(місто)</p></td>
+                    <td><input type="text" name="End" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть  ціну</p></td>
+                    <td><input type="number" name="Price" /> </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><input type="submit"  class="button" value="Додати" /> </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+
+
+    </div>
+</div>
+

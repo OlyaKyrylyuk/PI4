@@ -11,7 +11,6 @@ namespace WebApplication1.Models
     public class BusContext : DbContext
     {
         public DbSet<Bus> Buses { get; set; }
-        public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Buy_tickets> Buy_tickets { get; set; }
     }
 }

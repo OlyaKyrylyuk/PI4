@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Orders</h2>
+
+<h3>Замовлення</h3>
+<div class="info">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Прізвище</th>
+                <th scope="col">Ім'я</th>
+                <th scope="col">Номер карти</th>
+                <th scope="col">Адреса</th>
+                <th scope="col">Номер буса</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in ViewBag.Tickets)
+            {
+            <tr>
+                <th scope="row">@t.Id</th>
+                <th>@t.Surname</th>
+                <th>@t.Name</th>
+                <th>@t.N_card</th>
+                <th>@t.Address</th>
+                <th>@t.Bus_id</th>
+                <th><a href="/Home/DeleteOrder/@t.Id">Видалити</a></th>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

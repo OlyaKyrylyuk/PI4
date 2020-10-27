@@ -16,24 +16,39 @@
                     <th scope="col">Марка авто</th>
                     <th scope="col">Номер машини</th>
                     <th scope="col">Колір</th>
+                    <th scope="col">Дата</th>
+                    <th scope="col">Відправлення</th>
+                    <th scope="col">Прибуття</th>
+                    <th scope="col">Ціна</th>
                     <th scope="col"> </th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var b in ViewBag.Bus)
                 {
-                    <tr>
-                        <th scope="row">@b.Id</th>
-                        <th>@b.Number</th>
-                        <th>@b.Brand</th>
-                        <th>@b.Color</th>
-                        <th><a href="/Home/Buy/@b.Id">Купити квиток</a></th>
-                    </tr>
+
+                <tr>
+                    <th scope="row">@b.Id</th>
+                    <th>@b.Number</th>
+                    <th>@b.Brand</th>
+                    <th>@b.Color</th>
+                    <th>@b.Data</th>
+                    <th>@b.Start</th>
+                    <th>@b.End</th>
+                    <th>@b.Price грн</th>
+                    <th><a href="/Home/Buy/@b.Id">Купити квиток</a></th>
+                    <th><a href="/Home/EditBus/@b.Id">Редагувати</a></th>
+                    <th><a href="/Home/DeleteBus/@b.Id">Видалити</a></th>
+                </tr>
                 }
 
             </tbody>
         </table>
-
-
     </div>
+    <a href="/Home/Add/">Додати автобус</a>
+    <a href="/Home/Orders">Переглянути замовлення</a>
+
+
+
+
 </div>
