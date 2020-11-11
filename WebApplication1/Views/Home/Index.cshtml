@@ -27,25 +27,25 @@
                 @foreach (var b in ViewBag.Bus)
                 {
 
-                <tr>
-                    <th scope="row">@b.Id</th>
-                    <th>@b.Number</th>
-                    <th>@b.Brand</th>
-                    <th>@b.Color</th>
-                    <th>@b.Data</th>
-                    <th>@b.Start</th>
-                    <th>@b.End</th>
-                    <th>@b.Price грн</th>
-                    <th><a href="/Home/Buy/@b.Id">Купити квиток</a></th>
-                    <th><a href="/Home/EditBus/@b.Id">Редагувати</a></th>
-                    <th><a href="/Home/DeleteBus/@b.Id">Видалити</a></th>
-                </tr>
+                    <tr>
+                        <th scope="row">@b.Id</th>
+                        <th>@b.Number</th>
+                        <th>@b.Brand</th>
+                        <th>@b.Color</th>
+                        <th>@b.Data</th>
+                        <th>@b.Start</th>
+                        <th>@b.End</th>
+                        <th>@b.Price грн</th>
+                        <th><a href="/Home/Buy/@b.Id">Купити квиток</a></th>
+                        <th><a href="/Home/EditBus/@b.Id">Редагувати</a></th>
+                        <th><a href="/Home/DeleteBus/@b.Id">Видалити</a></th>
+                    </tr>
                 }
 
             </tbody>
         </table>
     </div>
-    <a href="/Home/Add/">Додати автобус</a>
+    <a href="/Home/BuyPost/">Додати автобус</a>
     <a href="/Home/Orders">Переглянути замовлення</a>
 
 

@@ -12,6 +12,7 @@ namespace WebApplication1.Models
         public string Name { get; set; }
         public int N_card { get; set; }
         public string Address { get; set; }
-        public int Bus_id { get; set; }
+        public int? BusId { get; set; }
+        public Bus Bus { get; set; }
     }
 }

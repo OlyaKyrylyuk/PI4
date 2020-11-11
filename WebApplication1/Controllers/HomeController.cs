@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
         {
             
             IEnumerable <Bus> bus = db.Buses;
-           
+
             ViewBag.Bus = bus;
         
             return View();
@@ -38,10 +38,9 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult Orders()
         {
-            IEnumerable<Buy_tickets> tickets = db.Buy_tickets;
-            ViewBag.Tickets = tickets;
-  
-            return View();
+            var tickets = db.Buy_tickets.Include(p => p.Bus);
+            return View(tickets.ToList());
+           
         }
         [HttpPost]
         public ActionResult BuyPost(Buy_tickets tickets)

@@ -1,8 +1,12 @@
 ﻿
+@model IEnumerable<WebApplication1.Models.Buy_tickets>
 @{
-    ViewBag.Title = "Orders";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                /**/
+
+                ViewBag.Title = "Orders";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <h2>Orders</h2>
 
@@ -16,12 +20,15 @@
                 <th scope="col">Ім'я</th>
                 <th scope="col">Номер карти</th>
                 <th scope="col">Адреса</th>
+                <th scope="col">ID буса</th>
                 <th scope="col">Номер буса</th>
+                <th scope="col">Марка буса</th>
+                <th scope="col">Колір буса</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var t in ViewBag.Tickets)
+            @foreach (var t in Model)
             {
             <tr>
                 <th scope="row">@t.Id</th>
@@ -29,7 +36,10 @@
                 <th>@t.Name</th>
                 <th>@t.N_card</th>
                 <th>@t.Address</th>
-                <th>@t.Bus_id</th>
+                <th>@t.BusId</th>
+                <th>@t.Bus.Number</th>
+                <th>@t.Bus.Brand</th>
+                <th>@t.Bus.Color</th>
                 <th><a href="/Home/DeleteOrder/@t.Id">Видалити</a></th>
             </tr>
             }
